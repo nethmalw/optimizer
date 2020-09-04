@@ -1,0 +1,13 @@
+.card-style {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.div-style {
+  display: flex;
+  flex-direction: column
+}
+
+

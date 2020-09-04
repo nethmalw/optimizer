@@ -1,0 +1,74 @@
+<div class="mat-elevation-z8">
+  <mat-grid-list cols="2" rowHeight="3:1">
+
+    <mat-card class="card-style">
+      <h1 style="color: darkorange;">{{"Penguin Ears"}}</h1>
+      <form [formGroup]="product1Form" (ngSubmit)="onSubmit(product1Form)">
+        <div class="div-style">
+
+          <div style="height: 30px">
+            <mat-label>
+              Cartons:
+              <input type="text" formControlName="noOfCartons">
+            </mat-label>
+          </div>
+          <div style="height: 30px">
+            <mat-label>
+              Single Units:
+              <input type="text" formControlName="noOfUnits">
+            </mat-label>
+          </div>
+        </div>
+
+        <div class="div-style">
+          <h3>Optimized Suggestions: </h3>
+          {{"Suggested no of cartons: " + product1Form.value.suggestedCartons}}
+          <br>
+          {{"Suggested no of units: " + product1Form.value.suggestedUnits}}
+          <br>
+          {{"Total price: " + product1Form.value.totalPrice}}
+        </div>
+
+        <button mat-button type="submit">Submit</button>
+      </form>
+    </mat-card>
+
+    <div>
+      <h1></h1>
+    </div>
+
+    <mat-card class="card-style">
+      <h1 style="color: darkorange;">{{"Horseshoes"}}</h1>
+      <form [formGroup]="product2Form" (ngSubmit)="onSubmit(product2Form)">
+
+        <div class="div-style">
+          <div style="height: 30px">
+            <mat-label>
+              Cartons:
+              <input type="text" formControlName="noOfCartons">
+            </mat-label>
+          </div>
+          <div style="height: 30px">
+            <mat-label>
+              Single Units:
+              <input type="text" formControlName="noOfUnits">
+            </mat-label>
+          </div>
+        </div>
+
+        <div class="div-style">
+          <h3>Optimized Suggestions: </h3>
+          {{"Suggested no of cartons: " + product2Form.value.suggestedCartons}}
+          <br>
+          {{"Suggested no of units: " + product2Form.value.suggestedUnits}}
+          <br>
+          {{"Total price: " + product2Form.value.totalPrice}}
+        </div>
+
+        <button mat-button type="submit">Submit</button>
+
+      </form>
+    </mat-card>
+
+  </mat-grid-list>
+</div>
